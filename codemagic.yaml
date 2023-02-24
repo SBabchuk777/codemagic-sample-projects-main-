@@ -191,7 +191,6 @@ workflows:
         - keystore_reference
       groups:
         - unity_credentials
-        - google_play
       vars:
         BUILD_SCRIPT: BuildAndroid
         PACKAGE_NAME: "io.codemagic.unitysample"
@@ -222,17 +221,6 @@ workflows:
               -quit ^
               -returnlicense ^
               -nographics
-      email:
-        recipients:
-          - user_1@example.com
-          - user_2@example.com
-        notify:
-          success: true
-          failure: false
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: GOOGLE_PLAY_TRACK
-        submit_as_draft: true
   
   
   unity-macos-workflow:
